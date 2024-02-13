@@ -1,0 +1,39 @@
+<% include ./partials/header%>
+
+<div id="resScreen" class=" justify-center sm:grid-cols-2 w-full items-center  md:p-24 p-2 box-border" style="gap:12px  " >
+    <% post.forEach((elem)=>{
+        %>
+            <div onclick="window.location.href='/pin/<%=elem._id%>'" class="break-inside-avoid  pb-6 relative">
+            <img class="w-60 m-1 rounded-3xl md:w-full relative" src="./images/uploads/<%=elem.postimage%>" alt="">
+            <p class="px-2 w-full"><%=elem.title%></p>
+            <div class="flex items-center ">
+                <img class="mx-2 rounded-full h-7 w-7 bg-cover" src="./images/userprofilepics/<%=elem.author.avatar%>" alt="">
+                <p class="w-full"><%= elem.author.fullname%></p>
+            </div>
+            </div>
+        <%
+    }) %>
+    
+   <script>
+    
+        let screenWidth = window.innerWidth;
+        let colCount = Math.round(screenWidth/250);
+        let parentWidth = Math.round(colCount*250) ;
+        
+        
+                console.log(parentWidth+"kk")
+                console.log(colCount)
+                document.getElementById('resScreen').style.columnCount = colCount
+                document.getElementById('resScreen').style.maxWidth = parentWidth
+                document.getElementById('resScreen').style.width = parentWidth
+        
+        window.matchMedia(("max-width:480px")).addListener(()=>{
+            document.getElementById('resScreen').style.columnCount = 2
+            console.log("2 is called");
+        });
+
+    </script>
+
+</div>
+
+<% include ./partials/footer%>

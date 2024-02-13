@@ -1,0 +1,23 @@
+<% include ./partials/header%>
+
+    <div>
+        <form action="/addpost" method="post" enctype="multipart/form-data">
+
+            <div class="flex flex-col w-full justify-center items-center">
+                <input name="postimage" class="m-12" type="file" >
+
+                <label class="w-1/2 justify-start" for="">Title</label>
+                <input name="title" class="m-1 w-1/2 border-2 border-zinc-500 rounded-3xl px-6 py-4" type="text" placeholder="Add a title">
+
+                <label class="w-1/2 justify-start"  for="">Description</label>
+                <input name="description" class="m-1 w-1/2 h-32 text-start align-top items-start justify-start  border-2 border-zinc-500 rounded-3xl px-6 py-4" type="text" placeholder="Add a decription">
+
+                <label class="w-1/2 justify-start"  for="">Tagged topics</label>
+                <input name="tags" class="m-1 w-1/2 border-2 border-zinc-500 rounded-3xl px-6 py-4" type="text" placeholder="Add Tags (Seperated by comma ">
+
+                <input class="m-1 my-12 w-1/2  rounded-3xl px-6 py-4 text-white" style="background-color: red;" type="submit" value="Publish">
+            </div>
+        </form>
+    </div>
+
+<% include ./partials/footer%>

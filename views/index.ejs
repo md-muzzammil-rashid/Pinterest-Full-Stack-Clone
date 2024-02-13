@@ -1,0 +1,44 @@
+<!-- <% include ./partials/header%> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+  </head>
+  <body>
+
+  <div style="min-width:100%; min-height: 100vh;" class="container  absolute  bg-zinc-400">
+    <div style="max-width: 32rem;" class="rounded-2xl py-4 pt-12 absolute -translate-x-1/2 justify-center items-center flex flex-col -translate-y-1/2 left-1/2 top-1/2   bg-white">
+      <!--pinterest logo-->
+      <img class="h-16" src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+      <p class="font-bold text-4xl m-8">Log in to see more</p>
+      
+      <form class="flex justify-center w-full flex-col items-center" action="/login" method="post">
+
+        <input name="username" type="text" placeholder="Username" class="py-4 w-3/5 px-8 -m-2 border border-gray-400 rounded-3xl border-2" /><br />
+        <input name="password" type="password" placeholder="Password" class="py-4 w-3/5 px-8 border border-gray-400 rounded-3xl border-2" />
+        
+        <h4 class="font-bold text-base py-3 text-start">Forgot your password?</h4>
+        
+        <input value="login" type="submit" style="background-color: red;" class=" px-6 py-3 btn text-white font-bold w-3/5 rounded-full int">Log in</input>
+      </form>
+      
+        
+        <footer class="flex flex-col justify-center items-center">
+          <p class="my-6 px-5  items-center w-full text-center ">
+            By continuing, you agree to Pinterest's
+            <b>Terms of Service, Privacy policy.</b>
+          </p>
+          <hr class="w-1/3  font-extrabold ">
+          <p>Not on Pinterest yet? <a href="/register">Sign Up </a></p>
+        </footer>
+      </div>
+    </div>
+    <div class="upbtn absolute px-6 top-12 left-20 py-3 bg-white font-bold rounded-full"><a href="/register"> Sign up `</a></div>
+ 
+    
+    <% include ./partials/footer%>
+    

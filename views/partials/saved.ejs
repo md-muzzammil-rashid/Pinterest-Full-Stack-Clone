@@ -1,0 +1,32 @@
+<% include ./header%>
+
+<div class="flex flex-col justify-center w-full items-center">
+    <img class="h-36 w-36 rounded-full bg-cover" src="../images/userprofilepics/<%=user.avatar%>" alt="">
+    <p><%=user.fullname%></p>
+    <p>@<%=user.username%></p>
+    <p><%=user.description%></p>
+    <div class="p-4">
+        <button onclick="window.location.href='/addpost'" class="bg-zinc-200 my-2 mx-1 font-medium text-zinc-800 px-6 py-3 rounded-full">Add Post</button>
+        <button onclick="window.location.href='/editprofile'" class="bg-zinc-200 my-2 mx-1 font-medium text-zinc-800 px-6 py-3 rounded-full">Edit Profile</button>
+    </div>
+    <div class="flex gap-3">
+        <button onclick="window.location.href='/profile'" class="p-2 hover:bg-zinc-100">Created</button>
+        <button class=" border-b-2 border-zinc-700 p-2 hover:bg-zinc-100">Saved</button>
+    </div>
+</div>
+<div class="  max-w-6xl m-24" style="column-count: 5;gap: 12px;" >
+    <% 
+    user.saved.forEach((elem)=>{
+        %>
+        <div onclick="window.location.href='/pin/<%=elem._id%>'" class="break-inside-avoid flex flex-col relative">
+            <img class="w-60 m-1 rounded-3xl relative" src="../images/uploads/<%=elem.postimage%>" alt="">
+            <p class="px-2"><%=elem.title%></p>
+            </div>
+            <%
+        }) %>
+        
+        
+        
+        </div>
+        
+<% include ./footer%>

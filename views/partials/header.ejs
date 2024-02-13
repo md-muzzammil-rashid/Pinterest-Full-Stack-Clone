@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+  </head>
+  <body class="w-full">
+    <div class="p-4 flex justify-around items-center hidden md:flex ">
+      <img class="h-7" src="/images/pinterest.svg" alt="">
+      <a class="text-zinc-700 font-semibold" href="/explore">Explore</a>
+      <a class="text-zinc-700 font-semibold" href="/profile">Profile</a>
+      <a class="text-zinc-700 font-semibold" href="/addpost">Create</a>
+      <div class="w-1/2">
+        <input type="text" placeholder="Search" class="bg-zinc-200 px-8 py-4 min-w-full rounded-full">
+      </div>
+      <button onclick="window.location.href='/logout'" style="background-color: red;" class="px-8 py-4 rounded-full text-white font-semibold">Logout</button>
+    </div>
